@@ -1,22 +1,3 @@
-<?php 
-session_start();
-
-if (isset($_SESSION['lang'])) {
-  if (!empty($_GET['lang'])) {
-      if ($_GET['lang'] == "in") {
-        $_SESSION['lang'] = "in";
-      }
-  }else{
-    $_SESSION['lang'] = "en";
-  }
-}else{
-  $_SESSION['lang'] = "en";
-}
-
-
-require_once "lang/".$_SESSION['lang'].".php";
- ?>
-
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -48,10 +29,10 @@ require_once "lang/".$_SESSION['lang'].".php";
             </div>
             <div class="collapse navbar-collapse justify-content-end" id="navigation">
               <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#about"><?php echo $lang['menu1'] ?></a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#skill"><?php echo $lang['menu2'] ?></a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#edu"><?php echo $lang['menu3'] ?></a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact"><?php echo $lang['menu4'] ?></a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#skill">Skills</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#edu">Education</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -68,7 +49,7 @@ require_once "lang/".$_SESSION['lang'].".php";
         <div class="content-center">
           <div class="cc-profile-image"><a href="#"><img src="images/auevan.jpg" alt="Image"/></a></div>
           <div class="h2 title">A Aufan NH</div>
-          <p class="category text-white"><?php echo $lang['gelar'] ?></p><a class="btn btn-primary smooth-scroll mr-2" href="mailto:ahmadaufannh@gmail.com" target="_blank" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">E-mail</a><a class="btn btn-primary" href="media/CV Aufan.png" download data-aos="zoom-in" data-aos-anchor="data-aos-anchor" target="_blank">Download CV</a>
+          <p class="category text-white">Student Of Informatics Engineering</p><a class="btn btn-primary smooth-scroll mr-2" href="mailto:ahmadaufannh@gmail.com" target="_blank" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">E-mail</a><a class="btn btn-primary" href="media/CV Aufan.png" download data-aos="zoom-in" data-aos-anchor="data-aos-anchor" target="_blank">Download CV</a>
         </div>
       </div>
       <div class="section">
@@ -85,33 +66,33 @@ require_once "lang/".$_SESSION['lang'].".php";
       <div class="row">
         <div class="col-lg-6 col-md-12">
           <div class="card-body">
-            <div class="h4 mt-0 title"><?php echo $lang['menu1'] ?></div>
-            <p><?php echo $lang['bio1'] ?></p>
-            <p><?php echo $lang['bio2'] ?></p>
+            <div class="h4 mt-0 title">About</div>
+            <p>Hello! I am Ahmad Aufan Nur Hakim, you can call me Aufan (A.K.A Auevan).</p>
+            <p>I was born in Rembang, Central Java, Indonesia on October 2, 2002. Now I am a student in the Department of Informatics at the Muria Kudus University. My hobby is coding. Besides that, I also like to join organizations to improve my soft skills. I often enter competitions to test the skills that I have acquired throughout my life.</p>
           </div>
         </div>
         <div class="col-lg-6 col-md-12">
           <div class="card-body">
-            <div class="h4 mt-0 title"><?php echo $lang['info'] ?></div>
+            <div class="h4 mt-0 title">Basic Information</div>
             <div class="row">
-              <div class="col-sm-4"><strong class="text-uppercase"><?php echo $lang['umur'] ?></strong></div>
-              <div class="col-sm-8"><?php echo $lang['iumur'] ?></div>
+              <div class="col-sm-4"><strong class="text-uppercase">Age</strong></div>
+              <div class="col-sm-8">19 years old</div>
             </div>
             <div class="row mt-3">
               <div class="col-sm-4"><strong class="text-uppercase">Email</strong></div>
               <div class="col-sm-8">ahmadaufannh@gmail.com</div>
             </div>
             <div class="row mt-3">
-              <div class="col-sm-4"><strong class="text-uppercase"><?php echo $lang['telpon'] ?></strong></div>
+              <div class="col-sm-4"><strong class="text-uppercase">Phone</strong></div>
               <div class="col-sm-8">+6282225142891</div>
             </div>
             <div class="row mt-3">
-              <div class="col-sm-4"><strong class="text-uppercase"><?php echo $lang['alamat'] ?></strong></div>
-              <div class="col-sm-8"><?php echo $lang['ialamat'] ?></div>
+              <div class="col-sm-4"><strong class="text-uppercase">Address</strong></div>
+              <div class="col-sm-8">Rembang, Central Java, Indonesia</div>
             </div>
             <div class="row mt-3">
-              <div class="col-sm-4"><strong class="text-uppercase"><?php echo $lang['bahasa'] ?></strong></div>
-              <div class="col-sm-8"><?php echo $lang['ibahasa'] ?></div>
+              <div class="col-sm-4"><strong class="text-uppercase">Language</strong></div>
+              <div class="col-sm-8">Indonesia, English, Jawa</div>
             </div>
           </div>
         </div>
@@ -144,14 +125,14 @@ require_once "lang/".$_SESSION['lang'].".php";
           <div class="col-md-6">
             <div class="progress-container progress-primary"><span class="progress-badge">PHP</span>
               <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div><span class="progress-value">80%</span>
+                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div><span class="progress-value">80%</span>
               </div>
             </div>
           </div>
           <div class="col-md-6">
             <div class="progress-container progress-primary"><span class="progress-badge">Corel Draw</span>
               <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div><span class="progress-value">80%</span>
+                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div><span class="progress-value">80%</span>
               </div>
             </div>
           </div>
@@ -160,14 +141,14 @@ require_once "lang/".$_SESSION['lang'].".php";
           <div class="col-md-6">
             <div class="progress-container progress-primary"><span class="progress-badge">Microsoft Word</span>
               <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div><span class="progress-value">80%</span>
+                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div><span class="progress-value">80%</span>
               </div>
             </div>
           </div>
           <div class="col-md-6">
             <div class="progress-container progress-primary"><span class="progress-badge">Microsoft Excel</span>
               <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div><span class="progress-value">75%</span>
+                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div><span class="progress-value">75%</span>
               </div>
             </div>
           </div>
@@ -537,28 +518,28 @@ require_once "lang/".$_SESSION['lang'].".php";
                       <div class="row mb-3">
                         <div class="col">
                           <div class="input-group"><span class="input-group-addon"><i class="fa fa-user-circle"></i></span>
-                            <input class="form-control" type="text" name="nama" placeholder="Name" pattern=".*\S.*" oninvalid="this.setCustomValidity('Please enter your name!')" oninput="setCustomValidity('')" required="" />
+                            <input class="form-control" type="text" name="nama" placeholder="Name" />
                           </div>
                         </div>
                       </div>
                       <div class="row mb-3">
                         <div class="col">
                           <div class="input-group"><span class="input-group-addon"><i class="fa fa-file-text"></i></span>
-                            <input class="form-control" type="text" name="subjek" placeholder="Subject" pattern=".*\S.*" required oninvalid="this.setCustomValidity('Please enter your requirements!')" oninput="setCustomValidity('')"/>
+                            <input class="form-control" type="text" name="subjek" placeholder="Subject" />
                           </div>
                         </div>
                       </div>
                       <div class="row mb-3">
                         <div class="col">
                           <div class="input-group"><span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                            <input class="form-control" type="email" name="email" placeholder="E-mail" pattern=".*\S.*" required oninvalid="this.setCustomValidity('Please enter the correct email!')" oninput="setCustomValidity('')"/>
+                            <input class="form-control" type="email" name="email" placeholder="E-mail" />
                           </div>
                         </div>
                       </div>
                       <div class="row mb-3">
                         <div class="col">
                           <div class="form-group">
-                            <textarea class="form-control" name="pesan" placeholder="Your Message" required="required" pattern=".*\S.*" required oninvalid="this.setCustomValidity('Please enter your message!')" oninput="setCustomValidity('')"></textarea>
+                            <textarea class="form-control" name="pesan" placeholder="Your Message" required="required" ></textarea>
                           </div>
                         </div>
                       </div>
@@ -582,25 +563,6 @@ require_once "lang/".$_SESSION['lang'].".php";
                     <p class="pb-2">+6282225142891</p>
                     <p class="mb-0"><strong>Email</strong></p>
                     <p>ahmadaufannh@gmail.com</p>
-                    <p><strong>Language</strong></p>
-                    <p> <form>
-                      <select class="form-control col-lg-6" onChange="document.location.href=this.options[this.selectedIndex].value;">
-                      <option>- Pilih -</option>
-                  <?php
-                    $host = 'https://auevan.github.io/profil/';
-                    if (empty($_GET['lang'])){ ?>
-                      <option value="index.php" selected=""><?php echo $lang['en'] ?></option>
-                      <option value="index.php?lang=in"><?php echo $lang['in'] ?></option>
-                    <?php
-                    }else{ ?>
-                      <option value="index.php"><?php echo $lang['en'] ?></option>
-                      <option value="index.php?lang=in" selected=""><?php echo $lang['in'] ?></option>
-                   <?php
-                    }
-                  ?>
-                        
-                      </select>
-                      </form></p>
                   </div>
                 </div>
               </div>
@@ -613,7 +575,7 @@ require_once "lang/".$_SESSION['lang'].".php";
 </div></div>
     </div>
     <footer class="footer">
-      <div class="container text-center"><a class="cc-facebook btn btn-link" href="https://id-id.facebook.com/auevan.milanisti.7" target="_blank"><i class="fa fa-facebook fa-2x " aria-hidden="true"></i></a><a target="_blank" class="cc-twitter btn btn-link " href="https://twitter.com/auevan_"><i class="fa fa-twitter fa-2x " aria-hidden="true"></i></a><a target="_blank" class="cc-google-plus btn btn-link" href="https://api.whatsapp.com/send?phone=6282225142891"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a><a target="_blank" class="cc-instagram btn btn-link" href="https://www.instagram.com/auevan_/"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i></a></div>
+      <div class="container text-center"><a class="cc-facebook btn btn-link" href="https://id-id.facebook.com/auevan.milanisti.7" target="_blank"><i class="fa fa-facebook fa-2x " aria-hidden="true"></i></a><a target="_blank" class="cc-twitter btn btn-link " href="https://twitter.com/auevan_"><i class="fa fa-twitter fa-2x " aria-hidden="true"></i></a><a target="_blank" class="cc-whatsapp btn btn-link" href="https://api.whatsapp.com/send?phone=6282225142891"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a><a target="_blank" class="cc-instagram btn btn-link" href="https://www.instagram.com/auevan_/"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i></a></div>
       <div class="h4 title text-center">A Aufan NH</div>
       <div class="text-center text-muted">
         <p>&copy;TemplateFlip X Auevan - Rembang, 2022</p>
@@ -645,13 +607,7 @@ require_once "lang/".$_SESSION['lang'].".php";
             console.log('Success!', response);
           })
           .catch(error => console.error('Error!', error.message))
-      });
-
-      function setLang() {
-        var lang = jQuery('#lang').val();
-        var host = location.hostname;
-        window.location.href='?lang='+lang;
-      }
+      })
     </script>
   </body>
 </html>
